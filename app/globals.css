@@ -17,17 +17,143 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: white;
+  background-color: #01111d;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+.qr-code-container img { /* Assuming your QR code is rendered within an img tag */
+  border-radius: 10px; /* Adjust the pixel value for desired roundedness */
+  text-align: center;
+}
+.theme-seds{
+  svg{
+    background-color: #01111d;
+  }
+
+}
+.theme-black{
+  svg{
+    border-radius: 12px;
+    background-color: #ffffff;
+  }
+}
+.theme-white{
+  svg{
+    border-radius: 12px;
+    background-color: #000000;
+  }
+}
+.qr-interface-container{
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.input-stuff{
+  width: 100%;
+  padding: 12px 20px;
+  color: black;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 20px;
+}
+.ref{
+  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fresh-looking-button{
+  display: inline-block;
+  background-color: var(--blue);
+  color: var(--black);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  border-radius: 0;
+  text-decoration: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+}
+.fresh-looking-button:hover{
+  background-color: var(--lblue);
+  color: var(--black);
+  text-decoration: none;
+}
+.fresh-looking-button:focus{
+  background-color: var(--dblue);
+  color: var(--white);
+  text-decoration: none;
+}
+
+:root{
+  --black: #202022;
+  --white: #F5fff9;
+  --blue: #3B76C4;
+  --dblue: #1e366b;
+  --drblue: #0F1c37;
+  --red: #e73131;
+  --lred: #ff4d4d;
+  --dred: #b30000;
+  --lblue: #736AFF;
+  --grey: #c8d9ee;
+  --difblack: #01111d;
+  --mono: 'Space Mono', monospace;
+  --sans: 'Poppins', sans-serif;
+  --duration: 2s;
+}
+
+.gradient{
+  background: linear-gradient(90deg, var(--difblack) 0%, var(--dblue) 30%, var(--blue) 70%, var(--difblack) 100%);
+  height: 2px;
+}
+
+/*COSMOTHON THEME*/
+/*:root{*/ 
+/*    --black: #202022;*/
+/*    --white: #CACACA;*/
+/*    --blue: #9e59b9;*/
+/*    --dblue: #8c4fa4;*/
+/*    --drblue: #7e4594;*/
+/*    --red: #e73131;*/
+/*    --lred: #ff4d4d;*/
+/*    --dred: #b30000;*/
+/*    --lblue: #b363d2;*/
+/*    --grey: #878787;*/
+/*    --difblack: #333336;*/
+/*    --font-size: 0.9rem;*/
+/*    --mono: 'Space Mono', monospace;*/
+/*    --sans: 'Orbitron', sans-serif;*/
+/*    --duration: 2s;*/
+/*}*/
+/*.gradient{*/
+/*    background: linear-gradient(90deg, rgba(65,65,50,1) 0%, #7e4594 15%,#b363d2 50%, #7e4594 85%, rgba(65,65,50,1) 100%);*/
+/*    height: 2px;*/
+/*}*/
+
+.fresh-looking-button{
+  display: inline-block;
+  background-color: var(--blue);
+  color: var(--black);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+}
+.fresh-looking-button:hover{
+  background-color: var(--lblue);
+  color: var(--black);
+  text-decoration: none;
+}
+.fresh-looking-button:focus{
+  background-color: var(--dblue);
+  color: var(--white);
+  text-decoration: none;
 }
